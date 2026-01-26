@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+function nextVideo() {
+ let video = document.getElementById("video");
+ let src1 = "Video1.mp4";
+ let src2 = "Video2.mp4";  
+ let num = Math.random();  
+ 
+
+
+ if (num < 0.167) {
+    src = "Video2.mp4";
+ } 
+ else if (num < 0.334) {
+    src = "Video1.mp4";
+} 
+else if (num < 0.5) {
+    src = "Video3.mp4";
+}
+else if (num < 0.667) {
+    src = "Video2.mp4";
+}
+else if (num < 0.834) {
+    src = "Video5.mp4";
+}
+else {
+    src = "Video6.mp4";
+}
+
+//this one is essential to change video, but I have it from the Visial studio AI.
+//I figured it out, it says that in the video with ID video, the scr change to src variable thats defined above.
+//This AI is amazing.
+ video.src = src;
+ video.load();
+ video.play();
+}
+
+</script>
+
+<style>
+
+#video {
+    position: absolute;
+    top: 4% ;
+    left: 2.5%;
+width: 700px;
+}
+
+#b1 {
+   position: absolute;
+  top: 50%;
+  left: 62.5%;
+ padding: 20px 40px;
+    font-size: 24px;
+  background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+#body {
+  background-color: #b6b6b6;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+#h1{
+
+position: absolute;
+top: 28.5%;
+left: 50%;
+font-size: 280%;
+}
+
+#text{
+
+position: absolute;
+top: 35%;
+left: 50%;
+font-size: 170%;
+}
+
+#map {
+  position: absolute;
+  top: 62.5%;
+  left: 50%;
+  width: 1000px;
+  
+}
+
+#b2 {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+<body id="body">
+
+    <video controls autoplay loop muted id="video">
+
+    <source src="StockVideo.mp4" type="video/mp4" id="scrVideo">
+    click next round to start
+    </video>
+    <h1 id="h1">How to play</h1>
+    <p id="text">Click the button below to start the game. A random video will play. <br>
+                Watch the video and try to were the location is.<br>
+                After the video ends, click the "Next Round" button to play another random video. Enjoy!!
+    </p>
+
+    <button id="b1" onclick="nextVideo()">
+    Next Round
+    </button>
+    <button id="b2" onclick='location.href="index.html"'>Go Back to the Lobby</button>
+    
+        <img src="fake map.png" id="map">
+
+</body>
+
+</html>
