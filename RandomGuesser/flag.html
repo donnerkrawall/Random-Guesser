@@ -9,28 +9,60 @@
 
 <script>
 
+let src = ""; // Global variable
+
 function newFlag() {
 
 let num = Math.random();
-let src = document.getElementById("img").src;
-let flag = document.getElementById("img");
+let option1 = document.getElementById("option1");
+let option2 = document.getElementById("option2");  
+let option3 = document.getElementById("option3");
+let option4 = document.getElementById("option4");
 
 if ( num < 0.25) {
-src = "german.png"
+src = "german.png"; option1.innerHTML = "Russian"; option2.innerHTML = "England"; option3.innerHTML = "America"; option4.innerHTML = "Germany";
 }
 else if ( num < 0.5) {
-src = "amerika.png"
+src = "amerika.png"; option1.innerHTML = "America"; option2.innerHTML = "Russian"; option3.innerHTML = "Germany"; option4.innerHTML = "England";
 }
 else if ( num < 0.75) {
-src = "russian.png"
+src = "russian.png"; option1.innerHTML = "Germany"; option2.innerHTML = "England"; option3.innerHTML = "Russian"; option4.innerHTML = "America";
 }
 else {
-src = "uk.png"
+src = "uk.png"; option1.innerHTML = "America"; option2.innerHTML = "Germany"; option3.innerHTML = "England"; option4.innerHTML = "Russian";
 }
 
 document.getElementById("img").src = src;
+chooseOption();
 }
 
+function chooseOption() {
+ if ( src == "german.png") {
+    option1.onclick = function() {alert("You are wrong");}
+    option2.onclick = function() {alert("You are wrong");}
+    option3.onclick = function() {alert("You are wrong");}
+    option4.onclick = function() {alert("You are right");}
+
+}
+else if ( src == "amerika.png") {
+    option1.onclick = function() {alert("You are right");}
+    option2.onclick = function() {alert("You are wrong");}
+    option3.onclick = function() {alert("You are wrong");}
+    option4.onclick = function() {alert("You are wrong");}
+}
+else if ( src == "russian.png") {
+    option1.onclick = function() {alert("You are wrong");}
+    option2.onclick = function() {alert("You are wrong");}
+    option3.onclick = function() {alert("You are right");}
+    option4.onclick = function() {alert("You are wrong");}
+}
+else if ( src == "uk.png") {
+    option1.onclick = function() {alert("You are wrong");}
+    option2.onclick = function() {alert("You are wrong");}
+    option3.onclick = function() {alert("You are right");}
+    option4.onclick = function() {alert("You are wrong");}
+}   
+}
 </script>
 
 <style>
@@ -93,5 +125,9 @@ font-size: 160%;
      <button id="b2" onclick='location.href="index.html"'>Go Back to the Lobby</button>
      <h1 id="h1">How to play</h1>
     <p id="text">Click the "Get New Flag" Button and Guess the Flag!</p>
+    <button id="option1" onclick="chooseOption()"></button>
+    <button id="option2" onclick="chooseOption()"></button>
+    <button id="option3" onclick="chooseOption()"></button>
+    <button id="option4" onclick="chooseOption()"></button>
 </body>
 </html>
