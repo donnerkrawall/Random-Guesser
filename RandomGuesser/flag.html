@@ -70,6 +70,7 @@ src = "uk.png"; option1.innerHTML = "America"; option2.innerHTML = "Germany"; op
 document.getElementById("img").src = src;
 chooseOption();
 countIt();
+value.innerHTML = "";
 }
 
 function chooseOption() {
@@ -158,6 +159,11 @@ function countIt() {
     document.getElementById("totalRight").innerHTML = "Total Right: " + right;
     let total = right + wrong;
     document.getElementById("total").innerHTML = "You have played " + total + " times.";
+
+    let avarage = (right / total) * 100;
+    document.getElementById("h3").innerHTML = "Your Avarage right is: " + avarage.toFixed(2) + "%";
+
+    
 }
 </script>
 <style>
@@ -312,6 +318,14 @@ font-size: 160%;
     font-size: 160%;
 
 }
+#h3 {
+
+    position: absolute;
+    top: 75%;
+    left: 68%;
+    font-size: 180%;
+
+}
 
 </style>
 </head>
@@ -332,5 +346,7 @@ font-size: 160%;
     <h1 id="totalWrong">Total Wrong:</h1>
     <h1 id="total"></h1>
     <p id="reminder">Please only use the Website on full screen.</p>
+    <h1 id="h3"></h1>
+
 </body>
 </html>
