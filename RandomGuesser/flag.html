@@ -9,30 +9,76 @@
 
 <script>
 
+let src = ""; // Global variable
+let right = 0;
+let wrong = 0;
+
 function newFlag() {
 
 let num = Math.random();
-let src = document.getElementById("img").src;
-let flag = document.getElementById("img");
+let option1 = document.getElementById("option1");
+let option2 = document.getElementById("option2");  
+let option3 = document.getElementById("option3");
+let option4 = document.getElementById("option4");
 
 if ( num < 0.25) {
-src = "german.png"
+src = "german.png"; option1.innerHTML = "Russian"; option2.innerHTML = "England"; option3.innerHTML = "America"; option4.innerHTML = "Germany";
 }
 else if ( num < 0.5) {
-src = "amerika.png"
+src = "amerika.png"; option1.innerHTML = "America"; option2.innerHTML = "Russian"; option3.innerHTML = "Germany"; option4.innerHTML = "England";
 }
 else if ( num < 0.75) {
-src = "russian.png"
+src = "russian.png"; option1.innerHTML = "Germany"; option2.innerHTML = "England"; option3.innerHTML = "Russian"; option4.innerHTML = "America";
 }
 else {
-src = "uk.png"
+src = "uk.png"; option1.innerHTML = "America"; option2.innerHTML = "Germany"; option3.innerHTML = "England"; option4.innerHTML = "Russian";
 }
 
 document.getElementById("img").src = src;
+chooseOption();
+countIt();
 }
 
-</script>
+function chooseOption() {
 
+
+
+ if ( src == "german.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+
+}
+else if ( src == "amerika.png") {
+    option1.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "russian.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "uk.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+
+
+}
+
+function countIt() {
+
+    document.getElementById("totalWrong").innerHTML = "Total Wrong: " + wrong;
+    document.getElementById("totalRight").innerHTML = "Total Right: " + right;
+}
+</script>
 <style>
 
 #body {
@@ -84,14 +130,101 @@ top: 35%;
 left: 62.5%;
 font-size: 160%;
 }
+
+#h2 {
+    position: absolute;
+    top: 67.5%;
+    left: 23%;
+    font-size: 180%;
+
+
+}
+
+
+#option1 {
+
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    font-size: 200%;
+    border: rgb(129, 129, 129) solid 2px;
+}
+ 
+#option1:hover, #option2:hover, #option3:hover, #option4:hover {
+    background-color: #cfcfcf;
+    border: rgb(129, 129, 129) solid 4px;
+}
+
+#option2 {
+
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    font-size: 200%;
+    border: rgb(129, 129, 129) solid 2px;
+}
+
+#option3 {
+
+    position: absolute;
+    top: 55%;
+    left: 20%;
+    font-size: 200%;
+    border: rgb(129, 129, 129) solid 2px;
+}
+
+#option4 {
+
+    position: absolute;
+    top: 55%;
+    left: 30%;
+    font-size: 200%;
+    border: rgb(129, 129, 129) solid 2px;
+}
+
+#value {
+
+    position: absolute;
+    top: 73%;
+    left: 22%;
+    font-size: 285%;
+
+}
+
+#totalRight {
+
+    position: absolute;
+    top: 82%;
+    left: 20%;
+    font-size: 180%;
+
+}
+
+#totalWrong {
+
+    position: absolute;
+    top: 82%;
+    left: 30%;
+    font-size: 180%;
+
+}
+
 </style>
 </head>
 
 <body id="body">
-    <img src="" id="img" type="image/png">
+    <img src="" id="img" type="image/png" alt="Click the Button to get a Flag!">
     <button id="b1" onclick="newFlag()">Get New Flag</button>  
      <button id="b2" onclick='location.href="index.html"'>Go Back to the Lobby</button>
      <h1 id="h1">How to play</h1>
     <p id="text">Click the "Get New Flag" Button and Guess the Flag!</p>
+    <button id="option1" onclick="chooseOption()"></button>
+    <button id="option2" onclick="chooseOption()"></button>
+    <button id="option3" onclick="chooseOption()"></button>
+    <button id="option4" onclick="chooseOption()"></button>
+    <h1 id="h2">Click on an Option</h1>
+    <h1 id="value"></h1>
+    <h1 id="totalRight">Total Right:</h1>
+    <h1 id="totalWrong">Total Wrong:</h1>
 </body>
 </html>
