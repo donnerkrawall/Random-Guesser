@@ -23,51 +23,138 @@ let option2 = document.getElementById("option2");
 let option3 = document.getElementById("option3");
 let option4 = document.getElementById("option4");
 
-if ( num < 0.083333) {
+if ( num < 0.025641025) {
 src = "german.png"; option1.innerHTML = "Russian"; option2.innerHTML = "England"; option3.innerHTML = "America"; option4.innerHTML = "Germany";
 }
-else if ( num < 0.16666) {
+else if ( num < 0.051282051) {
 src = "amerika.png"; option1.innerHTML = "America"; option2.innerHTML = "Russian"; option3.innerHTML = "Germany"; option4.innerHTML = "England";
 }
-else if ( num < 0.25) {
+else if ( num < 0.076923077) {
 src = "russian.png"; option1.innerHTML = "Germany"; option2.innerHTML = "England"; option3.innerHTML = "Russian"; option4.innerHTML = "America";
 }
 
-else if ( num < 0.33333) { 
+else if ( num < 0.1025641025) { 
     src = "flag-of-belgium.png"; option1.innerHTML = "Germany"; option2.innerHTML = "Belgium"; option3.innerHTML = "France"; option4.innerHTML = "Italy";
 }
 
-else if ( num < 0.41666) {
+else if ( num < 0.128205128) {
     src = "flag-of-France.png"; option1.innerHTML = "Italy"; option2.innerHTML = "Netherlands"; option3.innerHTML = "France"; option4.innerHTML = "Russia";
 }
-else if ( num < 0.5) {
+else if ( num < 0.153846154) {
     src = "flag-of-italy.png"; option1.innerHTML = "Ireland"; option2.innerHTML = "Italy"; option3.innerHTML = "Bulgaria"; option4.innerHTML = "Romania";
 }
-else if ( num < 0.5833 ) {
+else if ( num < 0.179487179) {
     src = "flag-of-netherlands.png"; option1.innerHTML = "Luxembourg"; option2.innerHTML = "Netherlands"; option3.innerHTML = "Croatia"; option4.innerHTML = "Czechia";
 }
 
-else if (num < 0.6666) { 
+else if (num < 0.205128205) {
+     src = "flag-of-denmark.png"; option1.innerHTML = "Norway"; option2.innerHTML = "Sweden"; option3.innerHTML = "Denmark"; option4.innerHTML = "Finland";
+}
+
+else if ( num < 0.230769231) {
 src = "flag-of-brazil.png"; option1.innerHTML = "Finland"; option2.innerHTML = "Sweden"; option3.innerHTML = "Norway"; option4.innerHTML = "Brazil";
 }
 
-else if ( num < 0.7499) {
+else if ( num < 0.256410256) {
     src = "flag-of-greece.png"; option1.innerHTML = "Greece"; option2.innerHTML = "Cyprus"; option3.innerHTML = "Turkey"; option4.innerHTML = "Malta";
 }
 
-else if ( num < 0.8332) {
+else if ( num < 0.282051282) {
     src = "flag-of-spain.png"; option1.innerHTML = "Colombia"; option2.innerHTML = "Venezuela"; option3.innerHTML = "Peru"; option4.innerHTML = "Spain";
 }
 
-else if ( num < 0.9165) {
+else if ( num < 0.307692308) {
     src = "flag-of-china.png"; option1.innerHTML = "Japan"; option2.innerHTML = "South Korea"; option3.innerHTML = "China"; option4.innerHTML = "Vietnam";
 }
 
-else {
-src = "uk.png"; option1.innerHTML = "America"; option2.innerHTML = "Germany"; option3.innerHTML = "England"; option4.innerHTML = "Russian";
+else if ( num < 0.333333333) {
+    src = "uk.png"; option1.innerHTML = "Canada"; option2.innerHTML = "Australia"; option3.innerHTML = "United Kingdom"; option4.innerHTML = "New Zealand";
+}
+else if ( num < 0.358974359) {
+    src = "flag-of-venezuela.png"; option1.innerHTML = "Venezuela"; option2.innerHTML = "Colombia"; option3.innerHTML = "Ecuador"; option4.innerHTML = "Peru";
+}
+else if ( num < 0.384615385) {
+    src = "flag-of-albania.png"; option1.innerHTML = "Albania"; option2.innerHTML = "North Macedonia"; option3.innerHTML = "Kosovo"; option4.innerHTML = "Montenegro";
+} 
+else if ( num < 0.41025641) {
+    src = "flag-of-luxembourg.png"; option1.innerHTML = "Luxembourg"; option2.innerHTML = "Netherlands"; option3.innerHTML = "Croatia"; option4.innerHTML = "Czechia";
+}
+else if ( num < 0.435897436) {
+    src = "flag-of-sweden.png"; option1.innerHTML = "Finland"; option2.innerHTML = "Sweden"; option3.innerHTML = "Norway"; option4.innerHTML = "Denmark";
+}
+else if ( num < 0.461538462) {
+    src = "flag-of-argentina.png"; option1.innerHTML = "Argentina"; option2.innerHTML = "Uruguay"; option3.innerHTML = "Paraguay"; option4.innerHTML = "Chile";
+}
+else if ( num < 0.487179487) {
+    src = "flag-of-australia.png"; option1.innerHTML = "Australia"; option2.innerHTML = "New Zealand"; option3.innerHTML = "Fiji"; option4.innerHTML = "Papua New Guinea";
+}
+else if ( num < 0.512820513) {
+    src = "flag-of-bangladesh.png"; option1.innerHTML = "Pakistan"; option2.innerHTML = "India"; option3.innerHTML = "Bangladesh"; option4.innerHTML = "Sri Lanka";
+}
+else if ( num < 0.538461538) {
+    src = "flag-of-canada.png"; option1.innerHTML = "United States"; option2.innerHTML = "Canada"; option3.innerHTML = "Mexico"; option4.innerHTML = "Cuba";
+}
+else if ( num < 0.564102564) {
+    src = "flag-of-japan.png"; option1.innerHTML = "South Korea"; option2.innerHTML = "China"; option3.innerHTML = "Japan"; option4.innerHTML = "Taiwan";
+}
+else if ( num < 0.58974359) {
+    src = "flag-of-colombia.png"; option1.innerHTML = "Venezuela"; option2.innerHTML = "Colombia"; option3.innerHTML = "Ecuador"; option4.innerHTML = "Peru";
+}
+else if ( num < 0.615384615) {
+    src = "flag-of-denmark.png"; option1.innerHTML = "Norway"; option2.innerHTML = "Sweden"; option3.innerHTML = "Denmark"; option4.innerHTML = "Finland";
+}
+else if ( num < 0.641025641) {
+    src = "flag-of-egypt.png"; option1.innerHTML = "Egypt"; option2.innerHTML = "Sudan"; option3.innerHTML = "Libya"; option4.innerHTML = "Tunisia";
+}
+else if ( num < 0.666666667) {
+    src = "flag-of-finland.png"; option1.innerHTML = "Sweden"; option2.innerHTML = "Norway"; option3.innerHTML = "Denmark"; option4.innerHTML = "Finland";
+}
+else if ( num < 0.692307692) {
+    src = "flag-of-india.png"; option1.innerHTML = "Pakistan"; option2.innerHTML = "India"; option3.innerHTML = "Bangladesh"; option4.innerHTML = "Sri Lanka";
+}
+else if ( num < 0.717948718) {
+    src = "flag-of-ireland.png"; option1.innerHTML = "Ireland"; option2.innerHTML = "Scotland"; option3.innerHTML = "Wales"; option4.innerHTML = "England";
+}
+else if ( num < 0.743589744) {
+    src = "flag-of-mexico.png"; option1.innerHTML = "United States  "; option2.innerHTML = "Canada"; option3.innerHTML = "Mexico"; option4.innerHTML = "Cuba";
+}
+else if ( num < 0.769230769) {
+    src = "flag-of-norway.png"; option1.innerHTML = "Norway"; option2.innerHTML = "Sweden"; option3.innerHTML = "Denmark"; option4.innerHTML = "Finland";
+}
+else if ( num < 0.794871795) {
+    src = "flag-of-korea-north.png"; option1.innerHTML = "South Korea"; option2.innerHTML = "China"; option3.innerHTML = "Japan"; option4.innerHTML = "North Korea";
+}
+else if ( num < 0.820512821) {
+    src = "flag-of-Kuwait.png"; option1.innerHTML = "Iraq"; option2.innerHTML = "Kuwait"; option3.innerHTML = "Saudi Arabia"; option4.innerHTML = "Bahrain";
+}
+else if ( num < 0.846153846) {
+    src = "flag-of-philippines.png"; option1.innerHTML = "Indonesia"; option2.innerHTML = "Malaysia"; option3.innerHTML = "Philippines"; option4.innerHTML = "Thailand";
+}
+else if ( num < 0.871794872) {
+    src = "flag-of-portugal.png"; option1.innerHTML = "Spain"; option2.innerHTML = "Portugal"; option3.innerHTML = "France"; option4.innerHTML = "Italy";
+}
+else if ( num < 0.897435897) {
+    src = "flag-of-latvia.png"; option1.innerHTML = "Estonia"; option2.innerHTML = "Latvia"; option3.innerHTML = "Lithuania"; option4.innerHTML = "Belarus";
+}
+else if ( num < 0.923076923) {
+    src = "flag-of-lithuania.png"; option1.innerHTML = "Estonia"; option2.innerHTML = "Latvia"; option3.innerHTML = "Lithuania"; option4.innerHTML = "Belarus";
+}
+else if ( num < 0.948717949) {
+    src = "flag-of-malagascar.png"; option1.innerHTML = "Madagascar"; option2.innerHTML = "Mauritius"; option3.innerHTML = "Seychelles"; option4.innerHTML = "Comoros";
+}
+else if ( num < 0.974358974) {
+    src = "flag-of-south-africa.png"; option1.innerHTML = "Nigeria"; option2.innerHTML = "Kenya"; option3.innerHTML = "South Africa"; option4.innerHTML = "Ghana";
+}
+else if ( num < 0.999999999) { 
+    src = "flag-of-turkey.png"; option1.innerHTML = "Greece"; option2.innerHTML = "Bulgaria"; option3.innerHTML = "Turkey"; option4.innerHTML = "Cyprus";
+}
+else if ( num < 1.0) { 
+    src = "flag-of-vatican-city.png"; option1.innerHTML = "Monaco"; option2.innerHTML = "Vatican City"; option3.innerHTML = "San Marino"; option4.innerHTML = "Liechtenstein";
 }
 
-document.getElementById("img").src = src;
+
+
+    document.getElementById("img").src = src;
 chooseOption();
 countIt();
 value.innerHTML = "";
@@ -151,7 +238,196 @@ else if ( src == "flag-of-netherlands.png") {
     option2.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
     option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
     option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
-}    }
+}
+else if ( src == "flag-of-denmark.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-sweden.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-venezuela.png") {
+    option1.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-luxembourg.png") {
+    option1.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-albania.png") {
+    option1.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-vatican-city.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();} 
+}
+else if ( src == "flag-of-mexico.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-turkey.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-korea-north.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+}
+else if ( src == "flag-of-south-africa.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-vatican-city.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();} 
+}
+else if ( src == "flag-of-australia.png") {
+    option1.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+
+}
+else if ( src == "flag-of-argentina.png") {
+    option1.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+
+}
+else if ( src == "flag-of-Bangladesh.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-canada.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-colombia.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-egypt.png") {
+    option1.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-finland.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+}
+else if ( src == "flag-of-india.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-japan.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-portugal.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-kuwait.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-latvia.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-lithuania.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-south-africa.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-malagascar.png") {
+    option1.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-vatican-city.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-turkey.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
 
 function countIt() {
 
