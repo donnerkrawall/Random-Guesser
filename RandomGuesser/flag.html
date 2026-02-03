@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flag Guesser</title>
 
 
 
@@ -140,7 +140,7 @@ else if ( num < 0.923076923) {
     src = "flag-of-lithuania.png"; option1.innerHTML = "Estonia"; option2.innerHTML = "Latvia"; option3.innerHTML = "Lithuania"; option4.innerHTML = "Belarus";
 }
 else if ( num < 0.948717949) {
-    src = "flag-of-malagascar.png"; option1.innerHTML = "Madagascar"; option2.innerHTML = "Mauritius"; option3.innerHTML = "Seychelles"; option4.innerHTML = "Comoros";
+    src = "flag-of-Madagascar.png"; option1.innerHTML = "Madagascar"; option2.innerHTML = "Mauritius"; option3.innerHTML = "Seychelles"; option4.innerHTML = "Comoros";
 }
 else if ( num < 0.974358974) {
     src = "flag-of-south-africa.png"; option1.innerHTML = "Nigeria"; option2.innerHTML = "Kenya"; option3.innerHTML = "South Africa"; option4.innerHTML = "Ghana";
@@ -277,8 +277,8 @@ else if ( src == "flag-of-vatican-city.png") {
 }
 else if ( src == "flag-of-mexico.png") {
     option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
-    option2.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
-    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
     option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
 }
 else if ( src == "flag-of-turkey.png") {
@@ -409,24 +409,32 @@ else if ( src == "flag-of-turkey.png") {
     option3.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
     option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+else if ( src == "flag-of-philippines.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-madagascar.png") {
+    option1.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-ireland.png") {
+    option1.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-norway.png") {
+    option1.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
 }
 
-
-
+}
 
 
 function countIt() {
