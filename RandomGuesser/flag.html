@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flag Guesser</title>
 
 
 
@@ -12,6 +12,8 @@
 let src = ""; // Global variable
 let right = 0;
 let wrong = 0;
+let answered = false; // true after the user clicks an option (prevents double-clicks)
+
 
 //got the Flags from https://www.countries-ofthe-world.com/flags-of-the-world.html
 
@@ -140,7 +142,7 @@ else if ( num < 0.923076923) {
     src = "flag-of-lithuania.png"; option1.innerHTML = "Estonia"; option2.innerHTML = "Latvia"; option3.innerHTML = "Lithuania"; option4.innerHTML = "Belarus";
 }
 else if ( num < 0.948717949) {
-    src = "flag-of-malagascar.png"; option1.innerHTML = "Madagascar"; option2.innerHTML = "Mauritius"; option3.innerHTML = "Seychelles"; option4.innerHTML = "Comoros";
+    src = "flag-of-Madagascar.png"; option1.innerHTML = "Madagascar"; option2.innerHTML = "Mauritius"; option3.innerHTML = "Seychelles"; option4.innerHTML = "Comoros";
 }
 else if ( num < 0.974358974) {
     src = "flag-of-south-africa.png"; option1.innerHTML = "Nigeria"; option2.innerHTML = "Kenya"; option3.innerHTML = "South Africa"; option4.innerHTML = "Ghana";
@@ -155,14 +157,17 @@ else if ( num < 1.0) {
 
 
     document.getElementById("img").src = src;
-chooseOption();
-countIt();
-value.innerHTML = "";
+    chooseOption();
+    countIt();
+    value.innerHTML = "";
 }
+
+
 
 function chooseOption() {
 
-
+ 
+    
 
  if ( src == "german.png") {
     option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
@@ -277,8 +282,8 @@ else if ( src == "flag-of-vatican-city.png") {
 }
 else if ( src == "flag-of-mexico.png") {
     option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
-    option2.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
-    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
     option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
 }
 else if ( src == "flag-of-turkey.png") {
@@ -409,24 +414,94 @@ else if ( src == "flag-of-turkey.png") {
     option3.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
     option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+else if ( src == "flag-of-philippines.png") {
+    option1.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-madagascar.png") {
+    option1.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-ireland.png") {
+    option1.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+}
+else if ( src == "flag-of-norway.png") {
+    option1.onclick = function() {right = right + 1; value.innerHTML = "You are right &#9989"; countIt();}
+    option2.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option3.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
+    option4.onclick = function() {wrong = wrong + 1; value.innerHTML = "You are wrong &#10060"; countIt();}
 }
 
+    // attach generic handlers using a simple correctMap + `answered` flag
+    const correctMap = {
+        "german.png": 4,
+        "amerika.png": 1,
+        "russian.png": 3,
+        "uk.png": 3,
+        "flag-of-belgium.png": 2,
+        "flag-of-france.png": 3,
+        "flag-of-italy.png": 2,
+        "flag-of-greece.png": 1,
+        "flag-of-spain.png": 4,
+        "flag-of-china.png": 3,
+        "flag-of-brazil.png": 4,
+        "flag-of-netherlands.png": 2,
+        "flag-of-denmark.png": 3,
+        "flag-of-sweden.png": 2,
+        "flag-of-venezuela.png": 1,
+        "flag-of-luxembourg.png": 1,
+        "flag-of-albania.png": 1,
+        "flag-of-vatican-city.png": 2,
+        "flag-of-mexico.png": 3,
+        "flag-of-turkey.png": 3,
+        "flag-of-korea-north.png": 4,
+        "flag-of-south-africa.png": 3,
+        "flag-of-australia.png": 1,
+        "flag-of-argentina.png": 1,
+        "flag-of-Bangladesh.png": 3,
+        "flag-of-canada.png": 2,
+        "flag-of-colombia.png": 2,
+        "flag-of-egypt.png": 1,
+        "flag-of-finland.png": 4,
+        "flag-of-india.png": 2,
+        "flag-of-japan.png": 3,
+        "flag-of-portugal.png": 2,
+        "flag-of-kuwait.png": 2,
+        "flag-of-latvia.png": 2,
+        "flag-of-lithuania.png": 3,
+        "flag-of-malagascar.png": 1,
+        "flag-of-philippines.png": 3,
+        "flag-of-madagascar.png": 1,
+        "flag-of-ireland.png": 1,
+        "flag-of-norway.png": 1
+    };
 
+    const correctIndex = correctMap[src] || 1;
 
+    ["option1","option2","option3","option4"].forEach((id, idx) => {
+        document.getElementById(id).onclick = function() {
+            if (answered) return;
+            answered = true;
+            if (idx + 1 === correctIndex) {
+                right = right + 1; value.innerHTML = "You are right &#9989";
+            } else {
+                wrong = wrong + 1; value.innerHTML = "You are wrong &#10060";
+            }
+            setResultColors("option" + correctIndex, id);
+            countIt();
+        };
+    });
+
+  
+
+}
 
 
 function countIt() {
@@ -441,6 +516,59 @@ function countIt() {
 
     
 }
+
+function resetColors() {
+  ["option1","option2","option3","option4"].forEach(id => {
+    const el = document.getElementById(id);
+    el.style.color = "black";
+    el.style.backgroundColor = "";
+  });
+  answered = false;
+}
+
+function setResultColors(correctId, clickedId) {
+  ["option1","option2","option3","option4"].forEach(id => {
+    const el = document.getElementById(id);
+    if (id === correctId) {
+      el.style.color = "white";
+      el.style.backgroundColor = "#4CAF50"; // green
+    } else {
+      el.style.color = "white";
+      el.style.backgroundColor = "red"; // wrong answers red
+    }
+  });
+}
+    
+
+//outdatet und wird nichtmehr benötigt                          function getStyle(){
+
+ //if (option1.onclick && right > 0) {
+   //     document.getElementById("option1").style.backgroundColor = "#4CAF50";
+   //    document.getElementById("option2").style.backgroundColor = "red";
+   //     document.getElementById("option3").style.backgroundColor = "red";
+   //     document.getElementById("option4").style.backgroundColor = "red";
+   // }
+   // else if (option2.onclick && right > 0) {
+   //     document.getElementById("option2").style.backgroundColor = "#4CAF50";
+   //     document.getElementById("option1").style.backgroundColor = "red";
+   //         document.getElementById("option3").style.backgroundColor = "red";
+ //     document.getElementById("option4").style.backgroundColor = "red";
+  //   }
+  //   else if (option3.onclick && right > 0) {
+  //       document.getElementById("option3").style.backgroundColor = "#4CAF50";
+ //        document.getElementById("option1").style.backgroundColor = "red";
+ //        document.getElementById("option2").style.backgroundColor = "red";
+ //        document.getElementById("option4").style.backgroundColor = "red";
+ //    }
+ //    else if (option4.onclick && right > 0) {
+  //       document.getElementById("option4").style.backgroundColor = "#4CAF50";
+ //        document.getElementById("option1").style.backgroundColor = "red";
+  //
+ //        document.getElementById("option2").style.backgroundColor = "red";
+ //        document.getElementById("option3").style.backgroundColor = "red";
+ //    }
+ //}
+
 </script>
 <style>
 
@@ -552,6 +680,12 @@ font-size: 160%;
     border: rgb(129, 129, 129) solid 2px;
 }
 
+/*#option1:disabled, #option2:disabled, #option3:disabled, #option4:disabled {
+    background-color: #e0e0e0;
+    border: rgb(129, 129, 129) solid 2px;
+    cursor: not-allowed;
+}*/
+
 #value {
 
     position: absolute;
@@ -608,14 +742,14 @@ font-size: 160%;
 
 <body id="body">
     <img src="" id="img" type="image/png" alt="Click the Button to get a Flag!">
-    <button id="b1" onclick="newFlag()">Get New Flag</button>  
+    <button id="b1" onclick="newFlag(); resetColors()" >Get New Flag</button>  
      <button id="b2" onclick='location.href="index.html"'>Go Back to the Lobby</button>
      <h1 id="h1">How to play</h1>
     <p id="text">Click the "Get New Flag" Button and Guess the Flag!</p>
-    <button id="option1" onclick="chooseOption()"></button>
-    <button id="option2" onclick="chooseOption()"></button>
-    <button id="option3" onclick="chooseOption()"></button>
-    <button id="option4" onclick="chooseOption()"></button>
+    <button id="option1" onclick="chooseOption(); getStyle()"></button>
+    <button id="option2" onclick="chooseOption(); getStyle()"></button>
+    <button id="option3" onclick="chooseOption(); getStyle()"></button>
+    <button id="option4" onclick="chooseOption(); getStyle()"></button>
     <h1 id="h2">Click on an Option</h1>
     <h1 id="value"></h1>
     <h1 id="totalRight">Total Right:</h1>
