@@ -6,132 +6,117 @@
     <title>Document</title>
 
 <style>
+body {
+    background-color: #b6b6b6;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 36px;
+    box-sizing: border-box;
+    font-size: 100%;
+}
 
-#b1 {
-    position: absolute;
-    top: 50%;
-    left: 23%;
-    padding: 20px 40px;
-    font-size: 24px;
+h1.main-title {
+    font-size: 2.5rem;
+    margin: 6px 0 4px;
+    text-align: center;
+}
+
+.games {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 120%;
+    max-width: 1100px;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 320px;
+    background: rgba(255,255,255,0.04);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.game-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    max-width: 450px;
+    border: 3px solid black;
+    border-radius: 6px;
+}
+
+.game-title {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.game-btn {
+    padding: 12px 22px;
+    font-size: 18px;
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
+    border: none;
+    border-radius: 6px;
 }
 
-#b2 {
-    position: absolute;
-    top: 50%;
-    left: 63%;
-    padding: 20px 40px;
-    font-size: 24px;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-}
-
-#b3 {
-    position: absolute;
-    top: 50%;
-    left: 43%;
-    padding: 20px 40px;
-    font-size: 24px;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-}
-
-
-#b2:hover, #b1:hover, #b3:hover {
-  background-color: #51a854;
-  background-color: #008206;
-    border: solid 3px;
-}
-
-#h1{
-
-position: absolute;
-top: 12.5%;
-left: 36%;
-font-size: 280%;
+.game-btn:hover {
+    background-color: #008206;
+    border: 3px solid #006000;
 }
 
 #p1 {
-    position: absolute;
-    top: 64%;
-    left: 34.5%;
-    font-size: 180%;
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 900px;
 }
-
-#body {
-    background-color: #b6b6b6;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-
-#map {
-    position: absolute;
-    top: 450px;
-    left: 78%;
-    width: 450px;
-    border: black solid 3px;
-    border-radius: 5px;
-}
-
-#flag {
-    position: relative;
-    top: 450px;
-    left: 4.5%;
-    width: 300px;
-    border: black solid 3px;
-}
-
-#pflag {
-   position: absolute;
-   top: 36% ;
-   left: 20.5%;
-   font-size: 180%;
-}
-
-#plocation {
-
-    position: absolute;
-    top: 36%;
-    left: 59.5%;
-    font-size: 180%;
-}
-
-#pNumber {
-    position: absolute;
-    top: 36%;
-    left: 42.5%;
-    font-size: 180%;
-}   
 
 #h2 {
-    position: absolute;
-    top: 82%;
-    left: 38%;
-    font-size: 160%;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 12px;
 }
+
 </style>
 
 </head>
 
 <body id="body">
-    <h1 id="h1">Welcome to Random Guesser!</h1>
+    <h1 class="main-title">Welcome to Random Guesser!</h1>
 
-    <p id="pflag">Guess the country by its flag!</p>
-    <p id="plocation">Guess the location by the video!</p>
-    <P id="pNumber">Guess the number!</P>
+    <div class="games">
+        <div class="game">
+            <img src="1-1_Laenderflaggen.jpeg" alt="Flag" class="game-img">
+            <p class="game-title">Guess the country by its flag!</p>
+            <button class="game-btn" onclick='location.href="flag.html"'>Start Game</button>
+        </div>
 
-    <button id="b1" onclick='location.href="flag.html"'>Start Game</button>
-    <button id="b2" onclick='location.href="location.html"'>Start Game</button>
-    <button id="b3" onclick='location.href="numberGuesserGame.html"'>Start Game</button>
-    <p id="p1">
-        Click on one of the "Start Game" Buttons to begin! Good luck! 
-    </p>
-<img src="1-1_Laenderflaggen.jpeg" id="flag">
-<img src="locationThumbnail.jpg" id="map">
-<h1 id="h2">Please only use the Website in full screen mode!</h1>
+        <div class="game">
+            <img src="startMap.png" alt="Number" class="game-img">
+            <p class="game-title">Guess the location by the video!</p>
+            <button class="game-btn" onclick='location.href="location.html"'>Start Game</button>
+        </div>
+
+        <div class="game">
+            <img src="randomNumber.jpg" alt="Random Number" class="game-img">
+            <p class="game-title">Guess the number!</p>
+            <button class="game-btn" onclick='location.href="numberGuesserGame.html"'>Start Game</button>
+        </div>
+    </div>
+
+    <p id="p1">Click on one of the "Start Game" Buttons to begin! Good luck!</p>
+
+    <h2 id="h2">Please only use the Website in full screen mode!</h2>
 </body>
 </html>
