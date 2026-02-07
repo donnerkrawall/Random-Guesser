@@ -10,7 +10,7 @@
 #b1 {
     position: absolute;
     top: 50%;
-    left: 35%;
+    left: 23%;
     padding: 20px 40px;
     font-size: 24px;
     background-color: #4CAF50;
@@ -21,7 +21,7 @@
 #b2 {
     position: absolute;
     top: 50%;
-    left: 55%;
+    left: 63%;
     padding: 20px 40px;
     font-size: 24px;
     background-color: #4CAF50;
@@ -29,7 +29,19 @@
     cursor: pointer;
 }
 
-#b2:hover, #b1:hover {
+#b3 {
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+
+#b2:hover, #b1:hover, #b3:hover {
   background-color: #51a854;
   background-color: #008206;
     border: solid 3px;
@@ -39,7 +51,7 @@
 
 position: absolute;
 top: 12.5%;
-left: 40%;
+left: 36%;
 font-size: 280%;
 }
 
@@ -53,29 +65,30 @@ font-size: 280%;
 #body {
     background-color: #b6b6b6;
     font-family: Arial, Helvetica, sans-serif;
+
 }
 
 #map {
     position: absolute;
-    top: 30%;
-    left: 70%;
-    width: 750px;
+    top: 450px;
+    left: 78%;
+    width: 450px;
     border: black solid 3px;
     border-radius: 5px;
 }
 
 #flag {
-    position: absolute;
-    top: 30% ;
-    left: 2.5%;
-    width: 500px;
+    position: relative;
+    top: 450px;
+    left: 4.5%;
+    width: 300px;
     border: black solid 3px;
 }
 
 #pflag {
    position: absolute;
    top: 36% ;
-   left: 33%;
+   left: 20.5%;
    font-size: 180%;
 }
 
@@ -83,9 +96,17 @@ font-size: 280%;
 
     position: absolute;
     top: 36%;
-    left: 53%;
+    left: 59.5%;
     font-size: 180%;
 }
+
+#pNumber {
+    position: absolute;
+    top: 36%;
+    left: 42.5%;
+    font-size: 180%;
+}   
+
 #h2 {
     position: absolute;
     top: 82%;
@@ -100,10 +121,12 @@ font-size: 280%;
     <h1 id="h1">Welcome to Random Guesser!</h1>
 
     <p id="pflag">Guess the country by its flag!</p>
-    <p id="plocation">Guess the location by the video </p>
+    <p id="plocation">Guess the location by the video!</p>
+    <P id="pNumber">Guess the number!</P>
 
     <button id="b1" onclick='location.href="flag.html"'>Start Game</button>
     <button id="b2" onclick='location.href="location.html"'>Start Game</button>
+    <button id="b3" onclick='location.href="numberGuesserGame.html"'>Start Game</button>
     <p id="p1">
         Click on one of the "Start Game" Buttons to begin! Good luck! 
     </p>
