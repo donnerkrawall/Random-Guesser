@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <input type="text" id="input1" placeholder="Enter time in seconds">
+        <p id="timerDisplay">Timer: 0</p>
+    <button id="submit" onclick="startTimer()">Start Timer</button>
+    <button id="b2" onclick="stopTimer()">Stop Timer</button>
+
+    <button class="game-btn" onclick='location.href="index.html"'>Back to Main Menu</button>
+    <script>
+let timerDisplay = document.getElementById("timerDisplay");
+let input = document.getElementById("input1");
+let submitBtn = document.getElementById("submit");
+let stopBtn = document.getElementById("b2");
+let timer = 0;
+let interval = null;
+
+function startTimer() {
+    timer = parseInt(input.value);
+    if (isNaN(timer) || timer <= 0) {
+        alert("Bitte geben Sie eine gültige Zahl ein!");
+        return;
+    }
+    if (interval) clearInterval(interval);
+    interval = setInterval(countdown, 1000);
+}
+
+function countdown() {
+    if (timer > 0) {
+        timerDisplay.textContent = "Timer: " + timer;
+        timer = timer - 1;
+    }
+    else {
+        timerDisplay.textContent = "Timer: Done";
+        clearInterval(interval);
+        playSound();
+    }
+}
+
+function playSound() {
+    let audio = new Audio("alarm.mp3");
+    audio.play();
+}
+
+
+function stopTimer() {
+    clearInterval(interval);
+    timerDisplay.textContent = "Timer: 0";
+    input.value = "";
+}
+
+    </script>
+</body>
+
+<style>
+#body {
+    background-color: #b6b6b6;
+    text-align: center;
+    font-size: 150%;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 36px;
+    box-sizing: border-box;
+}
+
+
+.controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+#b2:hover, #submit:hover {
+    background-color: #008206;
+    border: solid 3px;
+}
+
+#submit, #b2 {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+}
+
+#input1 {
+    padding: 10px 20px;
+    font-size: 18px;
+    width: 220px;
+}
+.game-btn {
+    padding: 12px 22px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+}
+.game-btn:hover {
+    background-color: #008206;
+    border: solid 3px;
+}
+
+</style>    
+</html>
