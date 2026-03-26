@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+body {
+    background-color: #b6b6b6;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 36px;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+h1.main-title {
+    font-size: 2.5rem;
+    margin: 6px 0 4px;
+    text-align: center;
+}
+
+.games {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 120%;
+    max-width: 1100px;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 320px;
+    background: rgba(255,255,255,0.04);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.game-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    max-width: 450px;
+    border: 3px solid black;
+    border-radius: 6px;
+}
+
+.game-title {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.game-btn {
+    padding: 12px 22px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+}
+
+.game-btn:hover {
+    background-color: #008206;
+    border: 3px solid #006000;
+}
+
+#p1 {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 900px;
+}
+
+#h2 {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 12px;
+}
+
+</style>
+
+</head>
+
+<body id="body">
+    <h1 class="main-title">Welcome to Random Guesser!</h1>
+
+    <div class="games">
+        <div class="game">
+            <img src="1-1_Laenderflaggen.jpeg" alt="Flag" class="game-img">
+            <p class="game-title">Guess the country by its flag!</p>
+            <button class="game-btn" onclick='location.href="flag.html"'>Start Game</button>
+        </div>
+
+        <div class="game">
+            <img src="startMap.png" alt="Number" class="game-img">
+            <p class="game-title">Guess the location by the video!</p>
+            <button class="game-btn" onclick='location.href="location.html"'>Start Game</button>
+        </div>
+
+        <div class="game">
+            <img src="randomNumber.jpg" alt="Random Number" class="game-img">
+            <p class="game-title">Guess the number!</p>
+            <button class="game-btn" onclick='location.href="numberGuesserGame.html"'>Start Game</button>
+        </div>
+    </div>
+
+    <p id="p1">Click on one of the "Start Game" Buttons to begin! Good luck!</p>
+
+    <h2 id="h2">Please only use the Website in full screen mode!</h2>
+   
+    
+</body>
+</html>
